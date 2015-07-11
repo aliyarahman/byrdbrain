@@ -9,6 +9,8 @@ Doing
 
 To do (high priority)
 - Legend
+- On rollover, circle grows and additional info div fades in (reverts to normal on mouseout)
+- Center viz area in browser window
 
 
 To do (low priority)
