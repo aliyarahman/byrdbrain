@@ -1,4 +1,4 @@
-Scrum board
+Scrum board: Flat
 
 Doing
 - Add centered text (org names) to circles
@@ -14,3 +14,8 @@ To do (high priority)
 
 To do (low priority)
 - Animated circle fade in
+
+
+
+
+Scrum board: Force
