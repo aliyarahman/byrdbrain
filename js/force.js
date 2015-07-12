@@ -18,14 +18,13 @@ var teal = "#1B5851";
 
 // Load the JSON data from MongoDB
 
-
 // Checks to make sure data is being loaded
 //console.log(organizations[10].name);
 
 
 
 
-// Experimental data
+/* Experimental data
 
 var nodes = [
     {
@@ -103,6 +102,10 @@ var nodes = [
     }
 ];
 
+*/
+
+var nodes = [];
+
 var links = [
     { "source": 0, "target": 1 },
     { "source": 0, "target": 2 },
@@ -115,6 +118,27 @@ var links = [
     { "source": 0, "target": 9 },
     { "source": 0, "target": 10 },
     { "source": 0, "target": 11 },
+    { "source": 0, "target": 12 },
+    { "source": 0, "target": 13 },
+    { "source": 0, "target": 14 },
+    { "source": 0, "target": 15 },
+    { "source": 0, "target": 16 },
+    { "source": 0, "target": 17 },
+    { "source": 0, "target": 18 },
+    { "source": 0, "target": 19 },
+    { "source": 0, "target": 20 },
+    { "source": 0, "target": 21 },
+    { "source": 0, "target": 22 },
+    { "source": 0, "target": 23 },
+    { "source": 0, "target": 24 },
+    { "source": 0, "target": 25 },
+    { "source": 0, "target": 26 },
+    { "source": 0, "target": 27 },
+    { "source": 0, "target": 28 },
+    { "source": 0, "target": 29 },
+    { "source": 0, "target": 30 },
+    { "source": 0, "target": 31 },
+    { "source": 0, "target": 32 }
 ];
 
 
@@ -135,7 +159,7 @@ var force = d3.layout.force()
     .size([width,height])
     .nodes(nodes)
     .links(links)
-    .linkDistance(width/4)
+    .linkDistance(width/5)
     .charge(-800)
     .start();
 
@@ -155,9 +179,33 @@ var node = svg.selectAll("circle")
     .data(nodes)
     .enter()
     .append('circle')
-    .attr('r', 20)
+    .attr('r', 10)
     .style("fill", function(d) { 
-        return d.color;})
+        var fillcolor;
+        console.log(d.community);
+        if (d.community.search("Black and brown") >-1) {
+            fillcolor = grey;
+        }
+        else if (d.community.search("African") >-1 || d.community.search("Black") >-1) {
+            fillcolor = red;
+        }
+        else if (d.community.search("Latino") >-1 || d.community.search("Hispanic") >-1 || d.community.search("Latina") >-1) {
+            fillcolor = teal;
+        }
+        else if (d.community.search("of color") >-1) {
+            fillcolor = orange;
+        }
+        else if (d.community.search("Asian") >-1) {
+            fillcolor = "#000099";
+        }
+        else if (d.community.search("Native") >-1) {
+            fillcolor = "#330066";
+        }
+        else {
+            fillcolor = black;
+        }
+
+        return fillcolor;})
     .style("fill-opacity", 0.8);
 
 var labels = svg.selectAll("text")
