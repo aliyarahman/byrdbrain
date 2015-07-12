@@ -31,12 +31,50 @@
 body {
     font-family: Circular-Pro-Book;
     padding: 100px;
+    background-color: #CED0CA;
 }
 
 h1 {
     color: #282828;
 }
 
+.black-text {
+    color: #282828;
+}
+
 .teal-text {
     color: #1B5851;
+}
+
+.title {
+    display: inline-block;
+}
+
+.different-graph {
+    display: inline-block;
+    margin-left: 100px;
+}
+
+.different-graph a {
+    text-decoration: none;
+}
+
+.different-graph a:hover {
+    color: #1B5851;
+}
+
+
+/* Flat graph style */
+
+
+/* Force layout style */
+
+.node {
+    stroke: #fff;
+    stroke-width: 2px;
+}
+
+.link {
+    stroke: #888888;
+    stroke-width: 2px;
 }
