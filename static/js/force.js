@@ -10,22 +10,36 @@ var purple = "#330066";
 var green = "#058b45";
 
 
-// Getting real data
-// ==========================================
-
-
-// var organizations = [ ]
-
-
-// Load the JSON data from MongoDB
-
-// Checks to make sure data is being loaded
-//console.log(organizations[10].name);
-
-
+// Load data - and let this be a wrapper for all other code, so actions don't start until the data is loaded.
 
 d3.json("http://localhost:3000/organizations", function(error, nodes) {
     d3.json("http://localhost:3000/links", function(error, links) {
+
+        // Dragging behavior
+
+
+        var node_drag = d3.behavior.drag()
+        .on("dragstart", dragstart)
+        .on("drag", dragmove)
+        .on("dragend", dragend);
+
+        function dragstart(d, i) {
+            force.stop() // stops the force auto positioning before you start dragging
+        }
+
+        function dragmove(d, i) {
+            d.px += d3.event.dx;
+            d.py += d3.event.dy;
+            d.x += d3.event.dx;
+            d.y += d3.event.dy; 
+            tick(); // this is the key to make it work together with updating both px,py,x,y on d !
+        }
+
+        function dragend(d, i) {
+            d.fixed = true; // of course set the node to fixed so the force doesn't include the node in its auto positioning stuff
+            tick();
+            force.resume();
+        }
 
 
         // Initiates the force layout
@@ -44,8 +58,11 @@ d3.json("http://localhost:3000/organizations", function(error, nodes) {
             .size([width,height])
             .nodes(nodes)
             .links(links)
-            .linkDistance(width/3)
-            .charge(-800)
+            .linkDistance(function(d){
+        return (Math.random()*width/4+100);
+            })
+            .charge(-400)
+            .gravity(.05)
             .start();
 
 
@@ -64,10 +81,9 @@ d3.json("http://localhost:3000/organizations", function(error, nodes) {
             .data(nodes)
             .enter()
             .append('circle')
-            .attr('r', 10)
+            .attr('r', 50)
             .style("fill", function(d) { 
                 var fillcolor;
-                console.log(d.community);
                 if (d.community.search("Black and brown") >-1) {
                     fillcolor = grey;
                 }
@@ -91,7 +107,8 @@ d3.json("http://localhost:3000/organizations", function(error, nodes) {
                 }
 
                 return fillcolor;})
-            .style("fill-opacity", 0.8);
+            .style("fill-opacity", 0.8)
+            .call(node_drag);
 
         var labels = svg.selectAll("text")
             .data(nodes)
@@ -101,8 +118,7 @@ d3.json("http://localhost:3000/organizations", function(error, nodes) {
             .attr("font-size", "24px")
             .text(function(d) { return d.name; }); 
 
-
-        force.on("tick", function() {
+        function tick() {
             edge.attr("x1", function(d) { return d.source.x; })
                 .attr("y1", function(d) { return d.source.y; })
                 .attr("x2", function(d) { return d.target.x; })
@@ -112,7 +128,9 @@ d3.json("http://localhost:3000/organizations", function(error, nodes) {
             labels.attr("transform", function(d) {
                 return "translate(" + d.x + "," + d.y + ")";
             });
-        }); // End tick func
+        }
+
+        force.on("tick", tick); // End tick func
 
     });
 });
