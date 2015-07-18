@@ -1,0 +1,245 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'json-server' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.35
+4 verbose cache add [ 'json-server', null ]
+5 verbose cache add name=undefined spec="json-server" args=["json-server",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'json-server',
+6 verbose parsed url   path: 'json-server',
+6 verbose parsed url   href: 'json-server' }
+7 silly lockFile 9f215afd-json-server json-server
+8 verbose lock json-server /home/aliya/.npm/9f215afd-json-server.lock
+9 silly lockFile 9f215afd-json-server json-server
+10 silly lockFile 9f215afd-json-server json-server
+11 verbose addNamed [ 'json-server', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile 6624355a-json-server json-server@
+14 verbose lock json-server@ /home/aliya/.npm/6624355a-json-server.lock
+15 silly addNameRange { name: 'json-server', range: '*', hasData: false }
+16 verbose request where is /json-server
+17 verbose request registry https://registry.npmjs.org/
+18 verbose request id c7432f615b95981b
+19 verbose url raw /json-server
+20 verbose url resolving [ 'https://registry.npmjs.org/', './json-server' ]
+21 verbose url resolved https://registry.npmjs.org/json-server
+22 verbose request where is https://registry.npmjs.org/json-server
+23 info trying registry request attempt 1 at 00:26:16
+24 http GET https://registry.npmjs.org/json-server
+25 http 200 https://registry.npmjs.org/json-server
+26 silly registry.get cb [ 200,
+26 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+26 silly registry.get     etag: '"3B1QIU98SMW522S8PR0KVRUQH"',
+26 silly registry.get     'content-type': 'application/json',
+26 silly registry.get     'cache-control': 'max-age=60',
+26 silly registry.get     'content-length': '105750',
+26 silly registry.get     'accept-ranges': 'bytes',
+26 silly registry.get     date: 'Sat, 18 Jul 2015 04:26:16 GMT',
+26 silly registry.get     via: '1.1 varnish',
+26 silly registry.get     age: '0',
+26 silly registry.get     connection: 'keep-alive',
+26 silly registry.get     'x-served-by': 'cache-jfk1034-JFK',
+26 silly registry.get     'x-cache': 'MISS',
+26 silly registry.get     'x-cache-hits': '0',
+26 silly registry.get     'x-timer': 'S1437193576.493637,VS0,VE91',
+26 silly registry.get     vary: 'Accept' } ]
+27 silly addNameRange number 2 { name: 'json-server', range: '*', hasData: true }
+28 silly addNameRange versions [ 'json-server',
+28 silly addNameRange   [ '0.0.0',
+28 silly addNameRange     '0.1.0',
+28 silly addNameRange     '0.1.1',
+28 silly addNameRange     '0.2.0',
+28 silly addNameRange     '0.3.0',
+28 silly addNameRange     '0.3.1',
+28 silly addNameRange     '0.3.2',
+28 silly addNameRange     '0.3.3',
+28 silly addNameRange     '0.3.4',
+28 silly addNameRange     '0.3.5',
+28 silly addNameRange     '0.3.6',
+28 silly addNameRange     '0.3.7',
+28 silly addNameRange     '0.3.8',
+28 silly addNameRange     '0.3.9',
+28 silly addNameRange     '0.3.10',
+28 silly addNameRange     '0.3.11',
+28 silly addNameRange     '0.4.0',
+28 silly addNameRange     '0.4.1',
+28 silly addNameRange     '0.4.2',
+28 silly addNameRange     '0.5.0',
+28 silly addNameRange     '0.5.1',
+28 silly addNameRange     '0.5.2',
+28 silly addNameRange     '0.5.4',
+28 silly addNameRange     '0.5.5',
+28 silly addNameRange     '0.5.6',
+28 silly addNameRange     '0.5.7',
+28 silly addNameRange     '0.5.8',
+28 silly addNameRange     '0.5.9',
+28 silly addNameRange     '0.5.10',
+28 silly addNameRange     '0.5.11',
+28 silly addNameRange     '0.5.12',
+28 silly addNameRange     '0.6.0',
+28 silly addNameRange     '0.6.1',
+28 silly addNameRange     '0.6.2',
+28 silly addNameRange     '0.6.3',
+28 silly addNameRange     '0.6.4',
+28 silly addNameRange     '0.6.5',
+28 silly addNameRange     '0.6.6',
+28 silly addNameRange     '0.6.7',
+28 silly addNameRange     '0.6.8',
+28 silly addNameRange     '0.6.9',
+28 silly addNameRange     '0.6.10',
+28 silly addNameRange     '0.7.0',
+28 silly addNameRange     '0.7.1',
+28 silly addNameRange     '0.7.2',
+28 silly addNameRange     '0.7.3',
+28 silly addNameRange     '0.7.4',
+28 silly addNameRange     '0.7.5',
+28 silly addNameRange     '0.7.6',
+28 silly addNameRange     '0.7.7',
+28 silly addNameRange     '0.7.8',
+28 silly addNameRange     '0.7.9',
+28 silly addNameRange     '0.7.10',
+28 silly addNameRange     '0.7.11',
+28 silly addNameRange     '0.7.12',
+28 silly addNameRange     '0.7.13',
+28 silly addNameRange     '0.7.14',
+28 silly addNameRange     '0.7.15',
+28 silly addNameRange     '0.7.16',
+28 silly addNameRange     '0.7.17',
+28 silly addNameRange     '0.7.18',
+28 silly addNameRange     '0.7.19',
+28 silly addNameRange     '0.7.20',
+28 silly addNameRange     '0.7.21' ] ]
+29 verbose addNamed [ 'json-server', '0.7.21' ]
+30 verbose addNamed [ '0.7.21', '0.7.21' ]
+31 silly lockFile 5f876681-json-server-0-7-21 json-server@0.7.21
+32 verbose lock json-server@0.7.21 /home/aliya/.npm/5f876681-json-server-0-7-21.lock
+33 silly lockFile 53b4d326-on-server-json-server-0-7-21-tgz https://registry.npmjs.org/json-server/-/json-server-0.7.21.tgz
+34 verbose lock https://registry.npmjs.org/json-server/-/json-server-0.7.21.tgz /home/aliya/.npm/53b4d326-on-server-json-server-0-7-21-tgz.lock
+35 verbose addRemoteTarball [ 'https://registry.npmjs.org/json-server/-/json-server-0.7.21.tgz',
+35 verbose addRemoteTarball   'b509dffd42157c1f53ebc793df1d0ac8cf452242' ]
+36 info retry fetch attempt 1 at 00:26:17
+37 verbose fetch to= /tmp/npm-19812-m56HcmcW/registry.npmjs.org/json-server/-/json-server-0.7.21.tgz
+38 http GET https://registry.npmjs.org/json-server/-/json-server-0.7.21.tgz
+39 http 200 https://registry.npmjs.org/json-server/-/json-server-0.7.21.tgz
+40 silly lockFile 53b4d326-on-server-json-server-0-7-21-tgz https://registry.npmjs.org/json-server/-/json-server-0.7.21.tgz
+41 silly lockFile 53b4d326-on-server-json-server-0-7-21-tgz https://registry.npmjs.org/json-server/-/json-server-0.7.21.tgz
+42 silly lockFile 5f876681-json-server-0-7-21 json-server@0.7.21
+43 silly lockFile 5f876681-json-server-0-7-21 json-server@0.7.21
+44 silly lockFile 6624355a-json-server json-server@
+45 silly lockFile 6624355a-json-server json-server@
+46 silly resolved [ { name: 'json-server',
+46 silly resolved     version: '0.7.21',
+46 silly resolved     description: 'Serves JSON files through REST routes.',
+46 silly resolved     main: './src/server/index.js',
+46 silly resolved     bin: { 'json-server': './bin/index.js' },
+46 silly resolved     directories: { test: 'test' },
+46 silly resolved     dependencies:
+46 silly resolved      { 'body-parser': '^1.8.1',
+46 silly resolved        chalk: '^0.4.0',
+46 silly resolved        cors: '^2.3.0',
+46 silly resolved        errorhandler: '^1.2.0',
+46 silly resolved        express: '^4.9.5',
+46 silly resolved        got: '^3.3.0',
+46 silly resolved        lodash: '^3.9.2',
+46 silly resolved        lowdb: '^0.10.0',
+46 silly resolved        'method-override': '^2.1.2',
+46 silly resolved        morgan: '^1.3.1',
+46 silly resolved        'node-uuid': '^1.4.2',
+46 silly resolved        pluralize: '^1.1.2',
+46 silly resolved        'underscore-db': '^0.9.0',
+46 silly resolved        'update-notifier': '^0.5.0',
+46 silly resolved        yargs: '^3.10.0' },
+46 silly resolved     devDependencies:
+46 silly resolved      { husky: '^0.6.1',
+46 silly resolved        mocha: '^2.2.4',
+46 silly resolved        rimraf: '^2.4.1',
+46 silly resolved        standard: '^3.8.0',
+46 silly resolved        supertest: '~0.8.1' },
+46 silly resolved     scripts:
+46 silly resolved      { test: 'NODE_ENV=test mocha -R spec test/**/*.js && standard',
+46 silly resolved        start: 'node bin',
+46 silly resolved        prepush: 'npm t' },
+46 silly resolved     repository:
+46 silly resolved      { type: 'git',
+46 silly resolved        url: 'git://github.com/typicode/json-server.git' },
+46 silly resolved     keywords:
+46 silly resolved      [ 'JSON',
+46 silly resolved        'server',
+46 silly resolved        'fake',
+46 silly resolved        'REST',
+46 silly resolved        'API',
+46 silly resolved        'prototyping',
+46 silly resolved        'mock',
+46 silly resolved        'mocking',
+46 silly resolved        'test',
+46 silly resolved        'testing',
+46 silly resolved        'rest',
+46 silly resolved        'data',
+46 silly resolved        'dummy',
+46 silly resolved        'sandbox' ],
+46 silly resolved     author: { name: 'Typicode', email: 'typicode@gmail.com' },
+46 silly resolved     license: 'MIT',
+46 silly resolved     bugs: { url: 'https://github.com/typicode/json-server/issues' },
+46 silly resolved     homepage: 'https://github.com/typicode/json-server',
+46 silly resolved     gitHead: '29469cc21fa0122a72bccfc4701a8ba4923b7cf0',
+46 silly resolved     _id: 'json-server@0.7.21',
+46 silly resolved     _shasum: 'b509dffd42157c1f53ebc793df1d0ac8cf452242',
+46 silly resolved     _from: 'json-server@',
+46 silly resolved     _npmVersion: '2.5.1',
+46 silly resolved     _nodeVersion: '0.12.0',
+46 silly resolved     _npmUser: { name: 'typicode', email: 'typicode@gmail.com' },
+46 silly resolved     maintainers: [ [Object] ],
+46 silly resolved     dist:
+46 silly resolved      { shasum: 'b509dffd42157c1f53ebc793df1d0ac8cf452242',
+46 silly resolved        tarball: 'http://registry.npmjs.org/json-server/-/json-server-0.7.21.tgz' },
+46 silly resolved     _resolved: 'https://registry.npmjs.org/json-server/-/json-server-0.7.21.tgz' } ]
+47 info install json-server@0.7.21 into /usr/local/lib
+48 info installOne json-server@0.7.21
+49 verbose lib/node_modules/json-server unbuild
+50 verbose tar unpack /home/aliya/.npm/json-server/0.7.21/package.tgz
+51 silly lockFile 6688241f-cal-lib-node-modules-json-server tar:///usr/local/lib/node_modules/json-server
+52 verbose lock tar:///usr/local/lib/node_modules/json-server /home/aliya/.npm/6688241f-cal-lib-node-modules-json-server.lock
+53 silly lockFile 7f496918-m-json-server-0-7-21-package-tgz tar:///home/aliya/.npm/json-server/0.7.21/package.tgz
+54 verbose lock tar:///home/aliya/.npm/json-server/0.7.21/package.tgz /home/aliya/.npm/7f496918-m-json-server-0-7-21-package-tgz.lock
+55 silly gunzTarPerm modes [ '755', '644' ]
+56 error Error: EACCES, mkdir '/usr/local/lib/node_modules/json-server'
+56 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules/json-server']
+56 error   errno: 3,
+56 error   code: 'EACCES',
+56 error   path: '/usr/local/lib/node_modules/json-server',
+56 error   fstream_type: 'Directory',
+56 error   fstream_path: '/usr/local/lib/node_modules/json-server',
+56 error   fstream_class: 'DirWriter',
+56 error   fstream_stack:
+56 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
+56 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53',
+56 error      'Object.oncomplete (fs.js:108:15)' ] }
+57 error Please try running this command again as root/Administrator.
+58 error System Linux 3.11.0-18-generic
+59 error command "/usr/local/bin/node" "/usr/local/bin/npm" "install" "-g" "json-server"
+60 error cwd /home/aliya/gitrepos/byrdbrain
+61 error node -v v0.10.35
+62 error npm -v 1.4.28
+63 error path /usr/local/lib/node_modules/json-server
+64 error fstream_path /usr/local/lib/node_modules/json-server
+65 error fstream_type Directory
+66 error fstream_class DirWriter
+67 error code EACCES
+68 error errno 3
+69 error stack Error: EACCES, mkdir '/usr/local/lib/node_modules/json-server'
+70 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
+70 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53
+70 error fstream_stack Object.oncomplete (fs.js:108:15)
+71 verbose exit [ 3, true ]

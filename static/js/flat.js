@@ -4,8 +4,11 @@
 var black = "#282828";
 var grey = "#aaaaaa";
 var red = "#c30a0c";
-var orange = "#f9cc0a";
-var teal = "#058b45";
+var yellow = "#f9cc0a";
+var blue = "#000099";
+var purple = "#330066";
+var green = "#058b45";
+
 
 
 
@@ -32,7 +35,7 @@ var spaceCircles = [
         "x_pos":20,
         "y_pos":150,
         "radius":20,
-        "color": teal,
+        "color": green,
         "poc_led" : "yes",
         "membership" : "yes"
     },
@@ -40,7 +43,7 @@ var spaceCircles = [
          "x_pos":60,
         "y_pos":150,
         "radius":20,
-        "color": orange,
+        "color": yellow,
         "poc_led" : "yes",
         "membership" : "yes"
     },
@@ -56,7 +59,7 @@ var spaceCircles = [
         "x_pos":140,
         "y_pos":150,
         "radius":20,
-        "color": teal,
+        "color": green,
         "poc_led" : "yes",
         "membership" : "yes"
     },
@@ -64,7 +67,7 @@ var spaceCircles = [
         "x_pos":20,
         "y_pos":400,
         "radius":20,
-        "color": orange,
+        "color": yellow,
         "poc_led" : "yes",
         "membership" : "yes"
     },
@@ -88,7 +91,7 @@ var spaceCircles = [
          "x_pos":140,
         "y_pos":400,
         "radius":20,
-        "color": teal,
+        "color": green,
         "poc_led" : "no",
         "membership" : "yes"
     },
@@ -97,7 +100,7 @@ var spaceCircles = [
         "x_pos":20,
         "y_pos":650,
         "radius":20,
-        "color": teal,
+        "color": green,
         "poc_led" : "yes",
         "membership" : "yes"
     },
@@ -113,7 +116,7 @@ var spaceCircles = [
         "x_pos":100,
         "y_pos":650,
         "radius":20,
-        "color": orange,
+        "color": yellow,
         "poc_led" : "yes",
         "membership" : "yes"
     },
@@ -121,7 +124,7 @@ var spaceCircles = [
         "x_pos":140,
         "y_pos":650,
         "radius":20,
-        "color": orange,
+        "color": yellow,
         "poc_led" : "yes",
         "membership" : "yes"
     }

@@ -5,16 +5,13 @@ var black = "#282828";
 var grey = "#aaaaaa";
 var red = "#c30a0c";
 var yellow = "#f9cc0a";
-var green = "#058b45";
 var blue = "#000099";
 var purple = "#330066";
-
+var green = "#058b45";
 
 
 // Getting real data
 // ==========================================
-
-
 
 
 // var organizations = [ ]
@@ -27,125 +24,139 @@ var purple = "#330066";
 
 
 
+d3.json("http://localhost:3000/organizations", function(error, nodes) {
 
-/* Experimental data
-
-var nodes = [
-    {
-	   "name": "PathwayProject",
-        "color": "transparent",
-        "poc_led" : "yes",
-        "membership" : "yes"
-    },
-    {
-    	"name": "NAACP",
-        "color": yellow,
-        "poc_led" : "yes",
-        "membership" : "yes"
-    },
-    {
-        "name": "NALP",
-        "color": red,
-        "poc_led" : "yes",
-        "membership" : "yes"
-    },
-    {
-        "name": "BYP100",
-        "color": green,
-        "poc_led" : "yes",
-        "membership" : "yes"
-    },
-    {
-        "name": "Higher Heights for America",
-        "color": yellow,
-        "poc_led" : "yes",
-        "membership" : "yes"
-    },
-    {
-        "name": "PowerPAC+",
-        "color": red,
-        "poc_led" : "yes",
-        "membership" : "no"
-    },
-    {
-        "name": "Lupe Fund, Inc",
-        "color": red,
-        "poc_led" : "yes",
-        "membership" : "yes"
-    },
-    {
-        "name": "CBCF",
-        "color": green,
-        "poc_led" : "no",
-        "membership" : "yes"
-    },
-  
-    {
-        "name": "USHLI",
-        "color": green,
-        "poc_led" : "yes",
-        "membership" : "yes"
-    },
-    {
-        "name": "Arizona Black Voter Alliance",
-        "color": red,
-        "poc_led" : "no",
-        "membership" : "yes"
-    },
-    {
-        "name": "APAICS",
-        "color": yellow,
-        "poc_led" : "yes",
-        "membership" : "yes"
-    },
-    {
-        "name": "AAA-Fund",
-        "color": yellow,
-        "poc_led" : "yes",
-        "membership" : "yes"
-    }
-];
-
-*/
-
-var nodes = ;
 
 var links = [
-    { "source": 0, "target": 1 },
-    { "source": 0, "target": 2 },
-    { "source": 0, "target": 3 },
-    { "source": 0, "target": 4 },
-    { "source": 0, "target": 5 },
-    { "source": 0, "target": 6 },
-    { "source": 0, "target": 7 },
-    { "source": 0, "target": 8 },
-    { "source": 0, "target": 9 },
-    { "source": 0, "target": 10 },
-    { "source": 0, "target": 11 },
-    { "source": 0, "target": 12 },
-    { "source": 0, "target": 13 },
-    { "source": 0, "target": 14 },
-    { "source": 0, "target": 15 },
-    { "source": 0, "target": 16 },
-    { "source": 0, "target": 17 },
-    { "source": 0, "target": 18 },
-    { "source": 0, "target": 19 },
-    { "source": 0, "target": 20 },
-    { "source": 0, "target": 21 },
-    { "source": 0, "target": 22 },
-    { "source": 0, "target": 23 },
-    { "source": 0, "target": 24 },
-    { "source": 0, "target": 25 },
-    { "source": 0, "target": 26 },
-    { "source": 0, "target": 27 },
-    { "source": 0, "target": 28 },
-    { "source": 0, "target": 29 },
-    { "source": 0, "target": 30 },
-    { "source": 3, "target": 31 },
-    { "source": 3, "target": 32 }
-];
-
-
+    {
+      "source": 0,
+      "target": 1
+    },
+    {
+      "source": 0,
+      "target": 2
+    },
+    {
+      "source": 0,
+      "target": 3
+    },
+    {
+      "source": 0,
+      "target": 4
+    },
+    {
+      "source": 0,
+      "target": 5
+    },
+    {
+      "source": 0,
+      "target": 6
+    },
+    {
+      "source": 0,
+      "target": 7
+    },
+    {
+      "source": 0,
+      "target": 8
+    },
+    {
+      "source": 0,
+      "target": 9
+    },
+    {
+      "source": 0,
+      "target": 10
+    },
+    {
+      "source": 0,
+      "target": 11
+    },
+    {
+      "source": 0,
+      "target": 12
+    },
+    {
+      "source": 0,
+      "target": 13
+    },
+    {
+      "source": 0,
+      "target": 14
+    },
+    {
+      "source": 0,
+      "target": 15
+    },
+    {
+      "source": 0,
+      "target": 16
+    },
+    {
+      "source": 0,
+      "target": 17
+    },
+    {
+      "source": 0,
+      "target": 18
+    },
+    {
+      "source": 0,
+      "target": 19
+    },
+    {
+      "source": 0,
+      "target": 20
+    },
+    {
+      "source": 0,
+      "target": 21
+    },
+    {
+      "source": 0,
+      "target": 22
+    },
+    {
+      "source": 0,
+      "target": 23
+    },
+    {
+      "source": 0,
+      "target": 24
+    },
+    {
+      "source": 0,
+      "target": 25
+    },
+    {
+      "source": 0,
+      "target": 26
+    },
+    {
+      "source": 0,
+      "target": 27
+    },
+    {
+      "source": 0,
+      "target": 28
+    },
+    {
+      "source": 0,
+      "target": 29
+    },
+    {
+      "source": 0,
+      "target": 30
+    },
+    {
+      "source": 3,
+      "target": 31
+    },
+    {
+      "source": 3,
+      "target": 32
+    }
+  ]
 
 // Initiates the force layout
 
@@ -232,3 +243,5 @@ force.on("tick", function() {
         return "translate(" + d.x + "," + d.y + ")";
     });
 }); // End tick func
+
+});

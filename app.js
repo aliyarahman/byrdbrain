@@ -1,28 +1,29 @@
-//Load Express to make web server and app stuff easy
+// Load required tools
+var express = require("express");
+var cors = require("cors");
+var path = require("path");
 
-var express = require('express');
+
+// Initatie the app and let is pull from cross-origin sources
 var app = express();
-var path = require('path');
+app.use(cors());
 
-// Point to folder that will hold static assets
-app.use(express.static('static'));
+// Point to the static files folder
+app.use(express.static(path.join(__dirname, 'static')));
 
 
-// Configure routes
+// Define a landing route to open the force layout
 app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname + '/force.html'));
+    res.sendFile(path.join(__dirname+'/force.html'));
 });
 
 app.get('/force', function(req, res) {
-    res.sendFile(path.join(__dirname + '/force.html'));
+    res.sendFile(path.join(__dirname+'/force.html'));
 });
 
 app.get('/flat', function(req, res) {
-    res.sendFile(path.join(__dirname + '/flat.html'));
+    res.sendFile(path.join(__dirname+'/flat.html'));
 });
 
-
-
-// Tell the app to listen for requests on port 8080
 
 app.listen(8080);
