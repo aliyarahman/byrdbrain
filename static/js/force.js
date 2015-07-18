@@ -81,7 +81,7 @@ d3.json("http://localhost:3000/organizations", function(error, nodes) {
             .data(nodes)
             .enter()
             .append('circle')
-            .attr('r', 50)
+            .attr('r', 40)
             .style("fill", function(d) { 
                 var fillcolor;
                 if (d.community.search("Black and brown") >-1) {
@@ -93,7 +93,7 @@ d3.json("http://localhost:3000/organizations", function(error, nodes) {
                 else if (d.community.search("Latino") >-1 || d.community.search("Hispanic") >-1 || d.community.search("Latina") >-1) {
                     fillcolor = green;
                 }
-                else if (d.community.search("of color") >-1) {
+                else if (d.community.search("of color") >-1 || d.community.search("immigrants") >-1) {
                     fillcolor = yellow;
                 }
                 else if (d.community.search("Asian") >-1) {
@@ -115,7 +115,8 @@ d3.json("http://localhost:3000/organizations", function(error, nodes) {
             .enter()
             .append("text")
             .attr("fill", black)
-            .attr("font-size", "24px")
+            .attr('class', 'node-label')
+            .attr("font-size", "18px")
             .text(function(d) { return d.name; }); 
 
         function tick() {

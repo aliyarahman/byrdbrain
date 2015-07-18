@@ -75,6 +75,10 @@ h1 {
 }
 
 .link {
-    stroke: #888888;
-    stroke-width: 2px;
+    stroke: #fff;
+    stroke-width: 3px;
+}
+
+.node-label {
+    fill: #000;
 }
