@@ -81,7 +81,7 @@ d3.json("http://localhost:3000/organizations", function(error, nodes) {
             .data(nodes)
             .enter()
             .append('circle')
-            .attr('r', 40)
+            .attr('r', 50)
             .style("fill", function(d) { 
                 var fillcolor;
                 if (d.community.search("Black and brown") >-1) {
@@ -127,7 +127,7 @@ d3.json("http://localhost:3000/organizations", function(error, nodes) {
             node.attr("cx", function(d) { return d.x; })
                 .attr("cy", function(d) { return d.y; })
             labels.attr("transform", function(d) {
-                return "translate(" + d.x + "," + d.y + ")";
+                return "translate(" + (d.x-30) + "," + (d.y+5) + ")";
             });
         }
 
