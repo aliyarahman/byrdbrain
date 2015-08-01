@@ -16,7 +16,6 @@ var orange = '#FF3300';
 var normal_colors = [white, yellow, green, blue, grey, purple]
 var reversed_colors = [orange, grey, green, blue, purple, yellow
 ]
-
 var w = 960;
 var h = 500;
 
@@ -33,6 +32,8 @@ y = d3.scale.linear().range([0, h-50])
 z = d3.scale.ordinal().range(reversed_colors)
 
 // 4 columns: campaign,white,black,latino,asian,native,arab
+
+
 var matrix = [
     [ 1, 68, 13, 8, 8, 0, 3],
     [ 2, 91, 7, 0, 2, 0, 0],
@@ -40,10 +41,12 @@ var matrix = [
 ];
 
 var reversed_matrix = [
-    [ 1, 3, 0, 8, 8, 13, 68],
-    [ 2, 0, 1, 2, 0, 7, 90],
+    [ 1, 3, 0 , 8, 8, 13, 68],
+    [ 2, 0, 0, 2, 0, 7, 91],
     [ 3, 0, 0, 0, 7, 3, 90]
 ];
+
+
 
 var remapped =["white","black","latino", "asian", "native", "arab"].map(function(dat,i){
     return reversed_matrix.map(function(d,ii){
